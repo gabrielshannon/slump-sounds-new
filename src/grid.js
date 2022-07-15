@@ -11,9 +11,9 @@ function Grid() {
     <ApolloProvider client={client}>
       <div className="container-app">
         <div className="container-main">
-          <h1>Header</h1>
           <Items></Items>
         </div>
+
         <Footer></Footer>
       </div>
     </ApolloProvider>

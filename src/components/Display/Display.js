@@ -24,11 +24,12 @@ function Display({ objects }) {
     activeTitle: objects[0].title,
     activeImage: objects[0].image[0].mediaItemUrl,
     activeAudio: objects[0].audio.mediaItemUrl,
+    activeDescription: objects[0].items[0].projectDescription,
+
     activeMediaUrl: "vzHEWLxGIig&ab",
     activeSubTitle: "null",
     activeSubAudio: "null",
     activeSubMediaUrl: objects[0].items[0].itemurl,
-    activeDescription: "",
   });
 
   const [setVisualOption, changeVisualOption] = useState(false);
@@ -79,7 +80,6 @@ function Display({ objects }) {
     changeVisualOption(appState.activeImage.includes("null"));
     changeAudioOption(appState.activeSubAudio.includes("null"));
     changeMediaOption(appState.activeSubMediaUrl.includes("null"));
-    console.log(appState.mediaItemUrl);
   }, [appState]);
 
   return (

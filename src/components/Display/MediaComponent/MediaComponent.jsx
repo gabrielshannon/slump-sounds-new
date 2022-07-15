@@ -26,7 +26,7 @@ class MediaCompnent extends React.Component {
           onReady={this._onReady}
         />
         <div className="media-description-area">
-          <p>{this.props.activeDescription}</p>
+          {this.props.activeDescription}
         </div>
       </div>
     );

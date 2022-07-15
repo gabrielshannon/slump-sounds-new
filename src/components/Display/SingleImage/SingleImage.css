@@ -22,7 +22,7 @@
   /* object-fit: cover; */
   border: 1px solid #cfcfcf;
   box-shadow: 0 0 3px 0 rgb(0 0 0 / 20%);
-  padding: 20px;
+  padding: 2px;
 }
 
 .media-title {
@@ -43,4 +43,5 @@
 
 .media-description {
   padding: 8px;
+  max-width: 450px;
 }

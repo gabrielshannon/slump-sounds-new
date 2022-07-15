@@ -13,9 +13,9 @@
 
 .outer-grid {
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 20px;
+  grid-column-gap: 30px;
 }
 
 .logo-item {
@@ -26,7 +26,7 @@
 .left-grid {
   /* border: 1px solid #cfcfcf; */
   max-height: 550px;
-  max-width: 600px;
+  max-width: 400px;
   font-family: Grotesk-Remix-reg;
   font-style: normal;
   color: #2f2f2f;
@@ -75,6 +75,7 @@
 .itemSubTitle {
   background-color: hsla(0, 0%, 71.4%, 0.3);
   box-shadow: 0 0 3px 0 rgb(0 0 0 / 20%);
+  /* padding: 6px; */
 }
 
 .itemSubTitle:hover {
