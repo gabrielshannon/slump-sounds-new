@@ -1,0 +1,16 @@
+.mediaWindow {
+  width: 650px;
+  height: 350px;
+}
+
+.media-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-description-area {
+  font-family: "Grotesk-Remix-reg";
+  font-size: 14px;
+  color: white;
+  padding: 8px;
+}

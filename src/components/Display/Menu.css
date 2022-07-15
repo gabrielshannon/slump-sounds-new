@@ -1,0 +1,18 @@
+.accordion__content {
+  /* border: 1px solid #cfcfcf; */
+  position: absolute;
+  bottom: 0;
+  background-color: transparent;
+  overflow: auto;
+  transition: max-height 1.5s ease-out;
+  bottom: 0px;
+  width: 100%;
+}
+
+.accordion:hover,
+.active {
+  background-color: rgb(182, 182, 182, 0.3);
+}
+
+.accordion__content .active {
+}
