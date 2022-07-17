@@ -9,7 +9,6 @@ import "react-h5-audio-player/lib/styles.css";
 import Marquee from "react-fast-marquee";
 import SingleImage from "./SingleImage/SingleImage";
 import MediaCompnent from "./MediaComponent/MediaComponent";
-import Youtube from "react-youtube";
 
 import React, { useState, useEffect } from "react";
 
@@ -24,18 +23,17 @@ function Display({ objects }) {
     activeTitle: objects[0].title,
     activeImage: objects[0].image[0].mediaItemUrl,
     activeAudio: objects[0].audio.mediaItemUrl,
-    activeDescription: objects[0].items[0].projectDescription,
-
-    activeMediaUrl: "vzHEWLxGIig&ab",
-    activeSubTitle: "null",
-    activeSubAudio: "null",
+    activeDescription: objects[0].projectDescription,
+    activeMediaUrl: objects[0].mediastreamurl,
+    activeSubTitle: objects[0].items[0].itemtitle,
+    activeSubAudio: objects[0].items[0].itemaudio.mediaItemUrl,
     activeSubMediaUrl: objects[0].items[0].itemurl,
   });
 
   const [setVisualOption, changeVisualOption] = useState(false);
   const [setAudioOption, changeAudioOption] = useState(false);
   const [setMediaOption, changeMediaOption] = useState(false);
-  const [currIndexVal, setCurrIndexVal] = useState();
+  const [currIndexVal, setCurrIndexVal] = useState(0);
 
   function toggleActive(index, trackIndex) {
     setState({
@@ -80,6 +78,7 @@ function Display({ objects }) {
     changeVisualOption(appState.activeImage.includes("null"));
     changeAudioOption(appState.activeSubAudio.includes("null"));
     changeMediaOption(appState.activeSubMediaUrl.includes("null"));
+    console.log(appState.activeDescription);
   }, [appState]);
 
   return (
@@ -115,7 +114,7 @@ function Display({ objects }) {
                           {items.itemtitle === "null" ? null : items.itemtitle}
                         </div>
                       ))
-                    : null}
+                    : ""}
                 </div>
               </>
             ))}

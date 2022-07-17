@@ -1,11 +1,10 @@
-.mediaWindow {
-  width: 650px;
-  height: 350px;
-}
-
 .media-area {
+  padding: 3px;
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .media-description-area {
@@ -13,5 +12,24 @@
   font-size: 14px;
   color: white;
   padding: 8px;
-  max-width: 450px;
+  max-width: 550px;
+}
+
+.video-box {
+  padding: 4px;
+}
+
+.video-title {
+  min-height: 7px;
+  /* width: 55%; */
+  color: #2f2f2f !important;
+  font-size: 13px;
+  padding: 5px;
+  background-color: hsla(0, 0%, 71.4%, 0.3);
+  display: flex;
+  border-top: 1px solid #cfcfcf;
+  border-left: 1px solid #cfcfcf;
+  border-right: 1px solid #cfcfcf;
+  box-shadow: 0 0 3px 0 rgb(0 0 0 / 20%);
+  z-index: 999;
 }

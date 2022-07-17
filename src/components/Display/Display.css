@@ -8,9 +8,6 @@
   font-style: normal;
 }
 
-.display-main {
-}
-
 .outer-grid {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
@@ -94,6 +91,10 @@
   display: flex;
   gap: 10px;
   font-size: 18px;
+}
+
+.display-current-title {
+  padding: 25px;
 }
 
 h1 {

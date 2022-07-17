@@ -1,10 +1,10 @@
 // js
 import React from "react";
 import YouTube from "react-youtube";
+import "./MediaComponent.css";
 
 class MediaCompnent extends React.Component {
   _onReady(event) {
-    // access to player in all event handlers via event.target
     event.target.playVideo();
   }
 
@@ -13,18 +13,21 @@ class MediaCompnent extends React.Component {
       height: "560",
       width: "700",
       playerVars: {
-        // https://developers.google.com/youtube/player_parameters
         autoplay: 1,
       },
     };
 
     return (
       <div className="media-area">
-        <YouTube
-          videoId={this.props.activeMedia}
-          opts={opts}
-          onReady={this._onReady}
-        />
+        <div className="video-box">
+          <div className="video-title">SLMP:006</div>
+
+          <YouTube
+            videoId={this.props.activeMedia}
+            opts={opts}
+            onReady={this._onReady}
+          />
+        </div>
         <div className="media-description-area">
           {this.props.activeDescription}
         </div>

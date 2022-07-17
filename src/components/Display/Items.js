@@ -6,6 +6,8 @@ import gql from "graphql-tag";
 import Display from "./Display";
 import "./Items.css";
 
+import loadingImage from "../../images/loadingImage.svg";
+
 const GET_ALL_MEDIA = gql`
   {
     slumpMedias(first: 300) {
@@ -39,11 +41,15 @@ function Items() {
   const { loading, error, data } = useQuery(GET_ALL_MEDIA);
 
   if (loading) {
-    return <h1>Loading..</h1>;
+    return (
+      <div className="display-main">
+        <img className="loading-img" src={loadingImage}></img>
+      </div>
+    );
   }
 
   if (error) {
-    return <h1>Loading..</h1>;
+    return <div className="display-main">":("</div>;
   }
 
   const {
@@ -52,7 +58,7 @@ function Items() {
 
   const slmpMedia = edges.map((item) => item.node.slumpMeta);
 
-  // console.log(slmpMedia);
+  console.log(slmpMedia);
 
   return <Display objects={slmpMedia}></Display>;
 }
